@@ -52,10 +52,15 @@ header a:hover {
     opacity: .7;
 }
 
+.filt-right{
+    display: flex;
+    float: right;
+    margin-right: 5%;
+}
+
 .form {
     display: flex;
     margin-top: 4rem;
-    margin-left: 72.8%;
 }
 
 input:-webkit-autofill,

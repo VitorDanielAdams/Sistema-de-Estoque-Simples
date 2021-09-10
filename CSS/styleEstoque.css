@@ -52,10 +52,15 @@ header a:hover {
     opacity: .7;
 }
 
+.filt-right{
+    display: flex;
+    float: right;
+    margin-right: 2.5%;
+}
+
 .form {
     display: flex;
     margin-top: 3rem;
-    margin-left: 67%;
 }
 
 .barratarefas {

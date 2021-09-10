@@ -73,24 +73,26 @@
             <a href="funcionarios.php">Funcionarios</a>
             <?php } ?>
         </div>
-        <form method="POST" class="form">
-            <div class="searchbar">
-                <input name="busca" placeholder="Procure pelo produto">
-            </div>
-            <div class="searchbar">
-            <select name="category">
-                <option value="">Categorias</option>
-                <option value="Alimentos">Alimentos</option>
-                <option value="Bebidas">Bebidas</option>
-                <option value="Padaria/Outros">Padaria/Outros</option>
-                <option value="Carnes">Carnes</option>
-                <option value="Laticínios/Frios">Laticínios/Frios</option>
-                <option value="Higiene/Limpeza">Higiene/Limpeza</option>
-                <option value="Frutas/Legumes/Verduras">Frutas/Legumes/Verduras</option>
-            </select>
-            </div>
-            <button type="submit" name="pesq"><i class="fa fa-search" aria-hidden="true"></i></button>
-        </form>
+        <div class="filt-right">
+            <form method="POST" class="form">
+                <div class="searchbar">
+                    <input name="busca" placeholder="Procure pelo produto">
+                </div>
+                <div class="searchbar">
+                <select name="category">
+                    <option value="">Categorias</option>
+                    <option value="Alimentos">Alimentos</option>
+                    <option value="Bebidas">Bebidas</option>
+                    <option value="Padaria/Outros">Padaria/Outros</option>
+                    <option value="Carnes">Carnes</option>
+                    <option value="Laticínios/Frios">Laticínios/Frios</option>
+                    <option value="Higiene/Limpeza">Higiene/Limpeza</option>
+                    <option value="Frutas/Legumes/Verduras">Frutas/Legumes/Verduras</option>
+                </select>
+                </div>
+                <button type="submit" name="pesq"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+        </div>
     <?php 
     
     $itens_por_pagina = 6;

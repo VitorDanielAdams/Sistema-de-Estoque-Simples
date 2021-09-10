@@ -40,12 +40,14 @@
     <div class="barratarefas">
         <a href="adicionaFuncionario.php">Adicionar</a>
     </div>
-    <form method="POST" class="form">
-            <div class="searchbar">
-                <input name="busca" placeholder="Procure pelo Funcionário">
-            </div>
-            <button type="submit" name="pesq"><i class="fa fa-search" aria-hidden="true"></i></button>
-    </form>
+    <div class="filt-right">
+        <form method="POST" class="form">
+                <div class="searchbar">
+                    <input name="busca" placeholder="Procure pelo Funcionário">
+                </div>
+                <button type="submit" name="pesq"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+    </div>
     <div class="container">
         <?php 
 

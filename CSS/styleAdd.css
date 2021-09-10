@@ -66,15 +66,17 @@ header a:hover {
 }
 
 .box {
+    margin-top: 30px;
+    width: 51%;
+    height: 100%;
+    background: #243b55;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px;
-    background: #243b55;
-    width: 70%;
+    padding: 10px;
     border-radius: 15px;
-    margin-top: 2rem;
+    color: #cccccc;
 }
 
 fieldset {
@@ -86,6 +88,7 @@ fieldset h1 {
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
+    margin-top: 10px;
 }
 
 .campo {
@@ -226,6 +229,29 @@ select option[value="hide"] {
     color: rgba(179, 0, 0, 0.979);
 }
 
+@media screen and (max-width: 800px) {
+    .box {
+        width: 70%;
+    }
+    .campo {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .campo select {
+        width: 16.6rem;
+        height: 1.9rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .adiciona {
+        width: 200px;
+    }
+    
+    
+}
+
 @media (min-width: 800px) {
     .box {
         width: 55%;
@@ -299,3 +325,4 @@ select option[value="hide"] {
         color: rgba(179, 0, 0, 0.979);
     }
 }
+

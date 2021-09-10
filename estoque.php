@@ -12,7 +12,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,38 +49,40 @@
         <a href="saida.php" name="saida" id="saida">Saida</a>
         <a href="export.php" id="excel"><img src="./images/excel.svg" alt="excel"></a>
     </div>
-    <form method="POST" class="form">
-    <div class="searchbar-mes">
-            <select name="mes">
-                <option value="">Mes</option>
-                <option value="1">Janeiro</option>
-                <option value="2">Fevereiro</option>
-                <option value="3">Março</option>
-                <option value="4">Abril</option>
-                <option value="5">Maio</option>
-                <option value="6">Junho</option>
-                <option value="7">Julho</option>
-                <option value="8">Agosto</option>
-                <option value="9">Setembro</option>
-                <option value="10">Outubro</option>
-                <option value="11">Novembro</option>
-                <option value="12">Dezembro</option>
-            </select>
-        </div> 
-        <div class="searchbar">
-            <select name="category">
-                <option value="">Categorias</option>
-                <option value="Alimentos">Alimentos</option>
-                <option value="Bebidas">Bebidas</option>
-                <option value="Padaria/Outros">Padaria/Outros</option>
-                <option value="Carnes">Carnes</option>
-                <option value="Laticínios/Frios">Laticínios/Frios</option>
-                <option value="Higiene/Limpeza">Higiene/Limpeza</option>
-                <option value="Frutas/Legumes/Verduras">Frutas/Legumes/Verduras</option>
-            </select>
+    <div class="filt-right">
+        <form method="POST" class="form">
+        <div class="searchbar-mes">
+                <select name="mes">
+                    <option value="">Mes</option>
+                    <option value="1">Janeiro</option>
+                    <option value="2">Fevereiro</option>
+                    <option value="3">Março</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Maio</option>
+                    <option value="6">Junho</option>
+                    <option value="7">Julho</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                </select>
+            </div> 
+            <div class="searchbar">
+                <select name="category">
+                    <option value="">Categorias</option>
+                    <option value="Alimentos">Alimentos</option>
+                    <option value="Bebidas">Bebidas</option>
+                    <option value="Padaria/Outros">Padaria/Outros</option>
+                    <option value="Carnes">Carnes</option>
+                    <option value="Laticínios/Frios">Laticínios/Frios</option>
+                    <option value="Higiene/Limpeza">Higiene/Limpeza</option>
+                    <option value="Frutas/Legumes/Verduras">Frutas/Legumes/Verduras</option>
+                </select>
+            </div>
+                <button name="pesq" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
         </div>
-            <button name="pesq" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-        </form>
     <?php 
 
     if (isset($_POST['pesq'])) {
