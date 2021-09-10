@@ -26,6 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="CSS/styleListaFuncionarios.css">
+    <link rel="icon" href="images/icon.jpg">
     
     <title>Lista de funcionarios</title>
 </head>

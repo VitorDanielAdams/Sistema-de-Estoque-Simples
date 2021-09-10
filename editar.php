@@ -38,6 +38,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
     <link rel="stylesheet" type="text/css" href="CSS/styleAdd.css" />
+    <link rel="icon" href="images/icon.jpg">
 
     <title>Editar</title>
 </head>
@@ -55,7 +56,7 @@
             <form method="POST" id="form">
                 <fieldset>
                     <h1>Produto <?= $produtos['id'] ?></h1>
-
+                <div class="left">
                     <div class="campo">
                         <label>Código do Produto</label>
                         <input value="<?= $produtos['codigo'] ?>" type="text" name="codigo" 
@@ -83,7 +84,8 @@
                         </select>
                         <small></small>
                     </div>
-
+                </div>
+                <div class="right">
                     <div class="campo">
                         <label>Descrição</label>
                         <input value="<?= $produtos['descricao'] ?>" type="text" name="description" 
@@ -104,7 +106,7 @@
                         name="price" id="price" step="0.01" min="0.1" maxlenght="10">
                         <small></small>
                     </div>
-
+                </div>
                     <div class="campo cat">
                         <label for="categoria">Categoria</label>
                         <input value="<?= $produtos['categoria'] ?>" type="option" name="categoria" 

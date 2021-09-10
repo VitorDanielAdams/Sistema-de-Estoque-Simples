@@ -32,7 +32,8 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
     <link rel="stylesheet" type="text/css" href="CSS/styleAdd.css" />
-
+    <link rel="icon" href="images/icon.jpg">
+    
     <title>Adicionar Produto</title>
 </head>
 
@@ -51,7 +52,7 @@
             <form method="POST" id="form">
                 <fieldset>
                     <h1>Novo Produto</h1>
-                    
+                <div class="left">
                     <div class="campo">
                         <label>Código do Produto</label>
                         <input type="number" name="codigo" id="codigo" maxlength="11" >
@@ -77,7 +78,8 @@
                             </select>
                         <small></small>
                     </div>
-
+                </div>
+                <div class="right">
                     <div class="campo">
                         <label>Descrição</label>
                         <input type="text" name="description" id="description" maxlenght="100">
@@ -96,7 +98,7 @@
                         min="0.1" maxlenght="10">
                         <small></small>
                     </div>
-
+                </div>
                     <div class="campo cat">
                         <label for="categoria">Categoria</label>
                         <input type="option" name="categoria" id="categorias" list="categoria" 
