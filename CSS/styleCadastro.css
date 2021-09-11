@@ -17,8 +17,6 @@ body {
     background: #141e30;
     background: -webkit-linear-gradient(to left, #141e30, #243b55);
     background: linear-gradient(to left, #141e30, #243b55);
-    width: 100vw;
-    height: 100vh;
 }
 
 header {
