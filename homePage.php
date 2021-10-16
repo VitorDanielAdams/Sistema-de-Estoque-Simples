@@ -115,7 +115,7 @@
 
         } else if (!empty($_POST['category']) && !empty($_POST['busca'])){
 
-           $produtos = $p->mostraCategoriaBusca($category);
+           $produtos = $p->mostraCategoriaBusca($category, $busca);
 
         } else if(!empty($_POST['busca'])){
 

@@ -171,7 +171,8 @@
     }
 </script>
 </html>
-<?php } else { 
+<?php 
+} else { 
     header("location: homePage.php");
     exit;
 } ?>

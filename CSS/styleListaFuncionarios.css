@@ -52,7 +52,7 @@ header a:hover {
     opacity: .7;
 }
 
-.filt-right{
+.filt-right {
     display: flex;
     float: right;
     margin-right: 5%;
@@ -61,17 +61,6 @@ header a:hover {
 .form {
     display: flex;
     margin-top: 4rem;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px #141e30 inset !important;
-}
-
-input:-webkit-autofill {
-    -webkit-text-fill-color: #ffffff !important;
 }
 
 .barratarefas {
@@ -203,7 +192,6 @@ tbody tr td img:hover {
 
 .paginacao {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center
 }

@@ -47,42 +47,43 @@
     </header>
     <!--Form Cadastro-->
     <div class="container">
-            <div class="box">
-                <form method="POST" id="form">
-                    <div class="title">
-                        <span>Alterar Senha</span>
-                    </div>
-                    <div class="input">
-                        <label>Senha Antiga</label>
-                        <input type="password" name="oldPassword" id="oldPassword" maxlength="15">
-                        <span class="eye">
-                            <i class="fa fa-eye" aria-hidden="true" id="show" onclick="toggleOld()"></i>
-                            <i class="fa fa-eye-slash" aria-hidden="true" id="hide" onclick="toggleOld()"></i>
-                        </span>
-                        <small></small>
-                    </div>
-                    <div class="input">
-                        <label>Senha Nova</label>
-                        <input type="password" name="password" id="password" maxlength="15">
-                        <span class="eye">
-                            <i class="fa fa-eye" aria-hidden="true" id="show1" onclick="togglePass()"></i>
-                            <i class="fa fa-eye-slash" aria-hidden="true" id="hide1" onclick="togglePass()"></i>
-                        </span>
-                        <small></small>
-                    </div>
-                    <div class="input">
-                        <label>Confirmar Senha Nova</label>
-                        <input type="password" name="confirmPassword" id="confirmPassword" maxlength="15">
-                        <span class="eye">
-                            <i class="fa fa-eye" aria-hidden="true" id="show2" onclick="toggleConf()"></i>
-                            <i class="fa fa-eye-slash" aria-hidden="true" id="hide2" onclick="toggleConf()"></i>
-                        </span>
-                        <small></small>
-                    </div>
-                    <button name="salvar" type="submit" onclick="return checkInputs();">Alterar</button>
-                </form>
-            </div>
+        <div class="box">
+            <form method="POST" id="form">
+                <div class="title">
+                    <span>Alterar Senha</span>
+                </div>
+                <div class="input">
+                    <label>Senha Antiga</label>
+                    <input type="password" name="oldPassword" id="oldPassword" maxlength="15">
+                    <span class="eye">
+                        <i class="fa fa-eye" aria-hidden="true" id="show" onclick="toggleOld()"></i>
+                        <i class="fa fa-eye-slash" aria-hidden="true" id="hide" onclick="toggleOld()"></i>
+                    </span>
+                    <small></small>
+                </div>
+                <div class="input">
+                    <label>Senha Nova</label>
+                    <input type="password" name="password" id="password" maxlength="15">
+                    <span class="eye">
+                        <i class="fa fa-eye" aria-hidden="true" id="show1" onclick="togglePass()"></i>
+                        <i class="fa fa-eye-slash" aria-hidden="true" id="hide1" onclick="togglePass()"></i>
+                    </span>
+                    <small></small>
+                </div>
+                <div class="input">
+                    <label>Confirmar Senha Nova</label>
+                    <input type="password" name="confirmPassword" id="confirmPassword" maxlength="15">
+                    <span class="eye">
+                        <i class="fa fa-eye" aria-hidden="true" id="show2" onclick="toggleConf()"></i>
+                        <i class="fa fa-eye-slash" aria-hidden="true" id="hide2" onclick="toggleConf()"></i>
+                    </span>
+                    <small></small>
+                </div>
+                <small id="text-error"></small>
+                <button name="salvar" type="submit" onclick="return checkInputs();">Alterar</button>
+            </form>
         </div>
+    </div>
 </body>
 <script src="SCRIPT/requiredsenha.js"></script>
 </html>
@@ -139,6 +140,6 @@ if(isset($_POST['salvar'])){
     }
 }
 } else { 
-    header("location: homePage.php");
+    header("location: menu.php");
     exit;
 } ?>
