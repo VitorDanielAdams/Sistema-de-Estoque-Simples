@@ -1,4 +1,4 @@
-# TccMotor
+# Sistema De Estoque
 
 - Instalar o XAMPP (marcar phpmyadmin e mysql)
 
