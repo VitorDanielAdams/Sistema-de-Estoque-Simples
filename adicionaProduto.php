@@ -128,13 +128,13 @@
 <?php
     if(isset($_POST['salvar'])){
 
-        $name = addslashes($_POST['nome']);
-        $cod = $_POST['codigo'];
-        $quantidade = $_POST['qtd'];
-        $descricao = addslashes($_POST['description']);
-        $fornecedor = addslashes($_POST['fornecedor']);
-        $categoria = addslashes($_POST['categoria']);
-        $preco = $_POST['price'];
+        $name = addslashes(strip_tags($_POST['nome']));
+        $cod = strip_tags($_POST['codigo']);
+        $quantidade = strip_tags($_POST['qtd']);
+        $descricao = addslashes(strip_tags($_POST['description']));
+        $fornecedor = addslashes(strip_tags($_POST['fornecedor']));
+        $categoria = addslashes(strip_tags($_POST['categoria']));
+        $preco = strip_tags($_POST['price']);
 
         if (!empty($name) && !empty($cod) &&  !empty($quantidade) && !empty($descricao) 
         && $fornecedor != 'hide' && !empty($categoria) && !empty($preco)){

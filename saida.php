@@ -59,11 +59,14 @@
 </body>
 <?php
 if(isset($_POST['salvar'])){
-    $cod = $_POST['codigo'];
-    $quantidade = $_POST['quantidade'];
+    $cod = strip_tags($_POST['codigo']);
+    $quantidade = strip_tags($_POST['quantidade']);
 
     $produtos = $p->selecionaCodigoProduto($cod);
     $estoque = 0;
+    if($quantidade < 0){
+        $quantidade = $quantidade * -1;
+    }
     foreach($produtos as $prod){
         
         $estoque_total = $prod['quantidade'];

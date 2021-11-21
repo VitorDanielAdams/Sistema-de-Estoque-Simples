@@ -85,13 +85,13 @@ $u = new Usuario;
     </body>
 <?php
     if(isset($_POST['salvar'])){
-        $nome = addslashes($_POST['nome']);
-        $cargo = $_POST['cargo'];
-        $telefone = $_POST['telefone'];
-        $turno = addslashes($_POST['turno']);
-        $user = addslashes($_POST['user']);
-        $password = addslashes($_POST['password']);
-        $confirmPassword = addslashes($_POST['confirmPassword']);
+        $nome = addslashes(strip_tags($_POST['nome']));
+        $cargo = strip_tags($_POST['cargo']);
+        $telefone = strip_tags($_POST['telefone']);
+        $turno = addslashes(strip_tags($_POST['turno']));
+        $user = addslashes(strip_tags($_POST['user']));
+        $password = addslashes(strip_tags($_POST['password']));
+        $confirmPassword = addslashes(strip_tags($_POST['confirmPassword']));
 
         if(!empty($nome) && $cargo != 'hide' && !empty($turno) && !empty($telefone) && !empty($user) 
         && !empty($password) && !empty($confirmPassword)){

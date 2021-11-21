@@ -77,11 +77,11 @@ $f->conectar("tcc","localhost","root","");
     </body>
 <?php
     if(isset($_POST['salvar'])){
-        $nome = addslashes($_POST['nome']);
-        $email =  addslashes($_POST['email']);
-        $cep = addslashes($_POST['cep']);
-        $telefone = $_POST['telefone'];
-        $cnpj = addslashes($_POST['cnpj']);
+        $nome = addslashes(strip_tags($_POST['nome']));
+        $email =  addslashes(strip_tags($_POST['email']));
+        $cep = addslashes(strip_tags($_POST['cep']));
+        $telefone = strip_tags($_POST['telefone']);
+        $cnpj = addslashes(strip_tags($_POST['cnpj']));
 
         if(!empty($nome) && !empty($email) && !empty($cep) && !empty($telefone) && !empty($cnpj)){
             $f->conectar("tcc","localhost","root","");

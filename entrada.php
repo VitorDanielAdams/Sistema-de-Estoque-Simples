@@ -47,7 +47,7 @@
                     </div>
                     <div class="input">
                         <label>Quantidade</label>
-                        <input type="text" name="quantidade" id="quantidade" maxlenght="11">
+                        <input type="number" name="quantidade" id="quantidade" maxlenght="11">
                         <small></small>
                     </div>
                 </div>
@@ -59,17 +59,20 @@
 </body>
 <?php
 if(isset($_POST['salvar'])){
-    $cod = $_POST['codigo'];
-    $quantidade = $_POST['quantidade'];
+    $cod = strip_tags($_POST['codigo']);
+    $quantidade = strip_tags($_POST['quantidade']);
 
     $produtos = $p->selecionaCodigoProduto($cod);
     $estoque = 0;
-    foreach($produtos as $prod){
-
-        $estoque = $prod['quantidade'] + $quantidade;
-
+    if($quantidade < 0){
+        $quantidade = $quantidade * -1;
     }
+    foreach($produtos as $prod){
+        $estoque = $prod['quantidade'] + $quantidade;
+    }
+
     if(!empty($quantidade) && !empty($cod)){
+        
         $p->conectar("tcc","localhost","root","");
         if($p->updateEntrada($estoque,$cod,$quantidade)){
             header("Location: estoque.php");

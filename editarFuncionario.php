@@ -91,11 +91,12 @@ $funcionarios = $u->selecionaFuncionario($id);
     </body>
 <?php
     if(isset($_POST['salvar'])){
-        $nome = addslashes($_POST['nome']);
-        $cargo = $_POST['cargo'];
-        $telefone = $_POST['telefone'];
-        $turno = addslashes($_POST['turno']);
-        $user = addslashes($_POST['user']);
+
+        $nome = addslashes(strip_tags($_POST['nome']));
+        $cargo = strip_tags($_POST['cargo']);
+        $telefone = strip_tags($_POST['telefone']);
+        $turno = addslashes(strip_tags($_POST['turno']));
+        $user = addslashes(strip_tags($_POST['user']));
 
         if(!empty($nome) && !empty($turno) && !empty($telefone) && !empty($user)){
             $u->conectar("tcc","localhost","root","");

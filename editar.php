@@ -134,13 +134,13 @@
 <?php
     if(isset($_POST['editar'])){
 
-        $name = addslashes($_POST['nome']);
-        $cod = $_POST['codigo'];
-        $quantidade = $_POST['qtd'];
-        $descricao = addslashes($_POST['description']);
-        $categoria = addslashes($_POST['categoria']);
-        $preco = $_POST['price'];
-        $fornecedor = addslashes($_POST['fornecedor']);
+        $name = addslashes(strip_tags($_POST['nome']));
+        $cod = strip_tags($_POST['codigo']);
+        $quantidade = strip_tags($_POST['qtd']);
+        $descricao = addslashes(strip_tags($_POST['description']));
+        $categoria = addslashes(strip_tags($_POST['categoria']));
+        $preco = strip_tags($_POST['price']);
+        $fornecedor = addslashes(strip_tags($_POST['fornecedor']));
 
         if(!empty($name) && !empty($cod) && !empty($quantidade) && !empty($descricao) && !empty($categoria) 
         && !empty($preco)){

@@ -89,9 +89,10 @@
 </html>
 <?php 
 if(isset($_POST['salvar'])){
-    $oldPassword = addslashes($_POST['oldPassword']);
-    $password = $_POST['password'];
-    $confirmPassword = $_POST['confirmPassword'];
+
+    $oldPassword = addslashes(strip_tags($_POST['oldPassword']));
+    $password = strip_tags($_POST['password']);
+    $confirmPassword = strip_tags($_POST['confirmPassword']);
 
     $senha = $u->senha($id);
 
