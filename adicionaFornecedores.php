@@ -3,7 +3,7 @@ session_start();
 if(!isset($_SESSION['id_user'])){
     header("location: index.php");
     exit;
-} else if ($_SESSION['rol'] == 0){ 
+} else if ($_SESSION['rol'] == 0 || $_SESSION['rol'] == 1){ 
 
 require_once 'CLASSES/fornecedores.php';
 $f = new Fornecedores;
